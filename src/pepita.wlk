@@ -25,3 +25,15 @@ object pepita {
 		self.posicion(nuevaPosicion)
 	}	
 }
+
+object roque{
+	var property position=game.at(0,0)
+	var property comidaActual=null
+	
+	method imagen()="jugador.png"
+	method encontraste(comida){
+		
+		comidaActual=comida
+	game.removeVisual(comida)
+	}
+}
