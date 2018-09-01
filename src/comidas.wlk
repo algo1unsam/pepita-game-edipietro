@@ -2,7 +2,7 @@ object manzana {
 	const property imagen = "manzana.png"
 	method energia() = 80
 	method teEncontro(alguien){
-		game.addVisual(self)
+		alguien.encontraste(self)
 	}
 }
 

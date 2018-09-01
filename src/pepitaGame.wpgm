@@ -28,8 +28,9 @@ program PepitaGame {
 	keyboard.a().onPressDo  {pepita.come(alpiste) }
 	keyboard.m().onPressDo {pepita.come(manzana)}	
 	//keyboard.s().onPressDo {roque.encontraste(alpiste)}
-	game.whenCollideDo(roque,{algo => roque.encontraste(algo)})
-	game.whenCollideDo(manzana,{alguien => manzana.teEncontro(alguien)})
+//	game.whenCollideDo(roque,{algo => roque.encontraste(algo)})
+//	game.whenCollideDo(manzana,{alguien => manzana.teEncontro(alguien)})
+	game.whenCollideDo(roque,{algo => algo.teEncontro(roque)})
 	
 //	START
 	game.start()
