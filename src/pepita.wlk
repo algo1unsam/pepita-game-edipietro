@@ -24,7 +24,7 @@ object pepita {
 	}	
 	method teEncontro(alguien){
 	
-		game.addVisualIn(manzana, game.at(0,0))
-		game.addVisualIn(alpiste, game.at(5,1))
+		game.addVisualIn(manzana, game.at(5,1))
+		game.addVisualIn(alpiste, game.at(5,5))
 		energia=energia+ alguien.energia()
 	   }}
