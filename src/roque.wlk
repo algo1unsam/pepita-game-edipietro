@@ -17,8 +17,9 @@ object roque{
 	}*/
 	method encontraste(comida){
 		comidaActual=comida	
-		    
-			game.removeVisual(comida)
-										
-		}		
-	}
+		game.removeVisual(comida)					
+		}	
+		
+		}	
+		
+	
