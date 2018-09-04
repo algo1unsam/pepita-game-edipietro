@@ -15,18 +15,20 @@ object pepita {
 	method come(comida) 
 	{energia = energia + comida.energia()}
 	method volaHacia(unaCiudad) {
-		if (ciudad = buenosAires) 
-	{game.say(self,"ya estuve")}
-			else 
-			   self.move(unaCiudad.posicion())
-			    ciudad = unaCiudad
-			}
+
+		if (ciudad != unaCiudad) {
+		self. move(unaCiudad.posicion())}
+			else{ game.say(self ,"ya estoy en ciudad")
+				ciudad = unaCiudad
+	}}
 	method energiaParaVolar(distancia) = 15 + 5 * distancia
-	method teAlcanzaParavolar(distancia){return distancia> self.energiaParaVolar(distancia) -energia}
-	
 	method move(nuevaPosicion) {
-		energia -= self.energiaParaVolar(posicion.distance(nuevaPosicion))
-		self.posicion(nuevaPosicion)	
+		if(energia -= self.energiaParaVolar(posicion.distance(nuevaPosicion))<0)
+		game.say(self, "dame de comer")
+			else
+			{energia= energia - self.energiaParaVolar(posicion.distance(nuevaPosicion))
+		self.posicion(nuevaPosicion)
+		}	
 	}	
 	method teEncontro(alguien){
 		game.addVisualIn(manzana, game.at(5,1))
